@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2B2B2B</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF1100</color>
+    <color name="colorSimulationStateText">#FFFFFF</color>
+    <color name="colorSimulationCarSelection">#9C0000</color>
+    <color name="miniSpeedometerColor">#FFFFFF</color>
+    <color name="miniRpmMeterColor">#FFFFFF</color>
+</resources>

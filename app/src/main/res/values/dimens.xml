@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top_car_details_card_view">50dp</dimen>
+    <dimen name="margin_car_details_card_view_content">10dp</dimen>
+    <dimen name="margin_bottom_car_details_card_view_title">10dp</dimen>
+    <dimen name="text_size_car_details_card_view_title">20sp</dimen>
+</resources>

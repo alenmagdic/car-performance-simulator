@@ -1,0 +1,492 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/colorPrimary">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:scrollbarTrackVertical="@android:color/white">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp">
+
+            <TextView
+                    android:id="@+id/text_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_speed"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_speed_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_speed"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="125" />
+
+            <TextView
+                    android:id="@+id/text_speed_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_speed_value"
+                    android:text="@string/label_speed_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_rpm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_speed"
+                    android:text="@string/label_rpm"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_rpm_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_rpm"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_rpm"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="5465" />
+
+
+            <TextView
+                    android:id="@+id/text_gear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_rpm"
+                    android:text="@string/label_current_gear"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_gear_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_gear"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_gear"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="5465" />
+
+
+            <TextView
+                    android:id="@+id/text_total_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_gear"
+                    android:text="@string/label_total_distance"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_total_distance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_total_distance"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_total_distance"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_total_distance_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_total_distance_value"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_total_distance_value"
+                    android:text="@string/label_total_distance_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_total_distance"
+                    android:text="@string/label_current_power"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_used_power_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_power"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_power"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="23.4" />
+
+            <TextView
+                    android:id="@+id/text_power_values_separator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_power"
+                    android:layout_marginStart="1dp"
+                    android:layout_toEndOf="@id/text_used_power_value"
+                    android:text="@string/label_power_values_separator"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_available_power_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_power"
+                    android:layout_marginStart="1dp"
+                    android:layout_toEndOf="@id/text_power_values_separator"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="56.7" />
+
+            <TextView
+                    android:id="@+id/text_power_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_power"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_available_power_value"
+                    android:text="@string/label_power_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_torque"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_power"
+                    android:text="@string/label_torque"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_used_torque_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_torque"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_torque"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="275.4" />
+
+            <TextView
+                    android:id="@+id/text_torque_values_separator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_torque"
+                    android:layout_marginStart="1dp"
+                    android:layout_toEndOf="@id/text_used_torque_value"
+                    android:text="@string/label_torque_values_separator"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_available_torque_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_torque"
+                    android:layout_marginStart="1dp"
+                    android:layout_toEndOf="@id/text_torque_values_separator"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="345.4" />
+
+            <TextView
+                    android:id="@+id/text_torque_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_torque"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_available_torque_value"
+                    android:text="@string/label_torque_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_kinetic_energy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_torque"
+                    android:text="@string/label_kinetic_energy"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_kinetic_energy_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_kinetic_energy"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_kinetic_energy"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_kinetic_energy_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_kinetic_energy"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_kinetic_energy_value"
+                    android:text="@string/label_kinetic_energy_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_produced_energy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_kinetic_energy"
+                    android:text="@string/label_produced_energy"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_produced_energy_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_produced_energy"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_produced_energy"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_produced_energy_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_produced_energy"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_produced_energy_value"
+                    android:text="@string/label_produced_energy_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_acceleration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_produced_energy"
+                    android:text="@string/label_acceleration"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_acceleration_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_acceleration"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_acceleration"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_acceleration_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_acceleration"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_acceleration_value"
+                    android:text="@string/label_acceleration_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_roll_resistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_acceleration"
+                    android:text="@string/label_roll_resistance"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_roll_resistance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_roll_resistance"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_roll_resistance"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_roll_resistance_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_roll_resistance"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_roll_resistance_value"
+                    android:text="@string/label_roll_resistance_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_air_resistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_roll_resistance"
+                    android:text="@string/label_air_resistance"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_air_resistance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_air_resistance"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_air_resistance"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_air_resistance_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_air_resistance"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_air_resistance_value"
+                    android:text="@string/label_air_resistance_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_roll_resistance_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_air_resistance"
+                    android:text="@string/label_roll_resistance_power"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_roll_resistance_power_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_roll_resistance_power"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_roll_resistance_power"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_roll_resistance_power_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_roll_resistance_power"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_roll_resistance_power_value"
+                    android:text="@string/label_roll_resistance_power_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_air_resistance_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_roll_resistance_power"
+                    android:text="@string/label_air_resistance_power"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_air_resistance_power_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_air_resistance_power"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_air_resistance_power"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_air_resistance_power_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_air_resistance_power"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_air_resistance_power_value"
+                    android:text="@string/label_air_resistance_power_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+
+            <TextView
+                    android:id="@+id/text_acceleration_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_air_resistance_power"
+                    android:text="@string/label_acceleration_power"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+
+            <TextView
+                    android:id="@+id/text_acceleration_power_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_acceleration_power"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_acceleration_power"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace"
+                    tools:text="526.3" />
+
+            <TextView
+                    android:id="@+id/text_acceleration_power_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_acceleration_power"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/text_acceleration_power_value"
+                    android:text="@string/label_acceleration_power_unit"
+                    android:textColor="@color/colorSimulationStateText"
+                    android:typeface="monospace" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</androidx.cardview.widget.CardView>
