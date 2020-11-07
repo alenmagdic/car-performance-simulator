@@ -353,7 +353,7 @@ class Simulator {
         const val MIN_POSSIBLE_RPM_FACTOR = 0.65 // relative to idle rpm
         const val MIN_POSSIBLE_RELATIVE_RPM_WITHOUT_THROTTLE = 10 // relative to idle rpm
         const val CLUTCH_RELEASE_RATE = 0.0015
-        const val TIME_BETWEEN_UPDATES_MILIS = 3L
+        const val TIME_BETWEEN_UPDATES_MILIS = 10L
     }
 
     interface SimulationListener {
